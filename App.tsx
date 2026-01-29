@@ -2,7 +2,6 @@ import React from 'react';
 import { View, StatusBar } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { useFonts } from 'expo-font';
 import { LinearGradient } from 'expo-linear-gradient';
 
 import HomeScreen from './src/screens/HomeScreen';
@@ -18,14 +17,6 @@ export type RootStackParamList = {
 const Stack = createStackNavigator<RootStackParamList>();
 
 export default function App() {
-  const [fontsLoaded] = useFonts({
-    'ComicSans': require('./assets/fonts/ComicSansMS.ttf'),
-  });
-
-  if (!fontsLoaded) {
-    return <View style={{ flex: 1, backgroundColor: '#FFE4E1' }} />;
-  }
-
   return (
     <View style={{ flex: 1 }}>
       <StatusBar barStyle="light-content" backgroundColor="#4A90E2" />
