@@ -186,20 +186,20 @@ const styles = {
     backgroundColor: colors.background,
   },
   contentContainer: {
-    flexGrow: 1,
+    flex: 1,
     padding: spacing.lg,
-    paddingBottom: 120,
   },
   pageCard: {
+    flex: 1,
     backgroundColor: colors.surface,
     borderRadius: borderRadius.large,
     padding: spacing.xl,
-    minHeight: height * 0.4,
     elevation: 4,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.1,
     shadowRadius: 4,
+    justifyContent: 'space-between' as const,
   },
   pageNumber: {
     flexDirection: 'row' as const,
@@ -217,7 +217,8 @@ const styles = {
     lineHeight: 28,
     color: colors.text,
     textAlign: 'justify' as const,
-    marginBottom: spacing.xl,
+    flex: 1,
+    textAlignVertical: 'center' as const,
   },
   decorativeElements: {
     flexDirection: 'row' as const,
@@ -277,6 +278,7 @@ const styles = {
   nextButtonGradient: {
     flexDirection: 'row' as const,
     alignItems: 'center' as const,
+    justifyContent: 'center' as const,
     paddingHorizontal: spacing.md,
     paddingVertical: spacing.sm,
     minWidth: 80,
