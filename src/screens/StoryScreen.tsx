@@ -183,10 +183,12 @@ const styles = {
   },
   scrollView: {
     flex: 1,
+    backgroundColor: colors.background,
   },
   contentContainer: {
+    flexGrow: 1,
     padding: spacing.lg,
-    paddingBottom: 100,
+    paddingBottom: 120,
   },
   pageCard: {
     backgroundColor: colors.surface,
@@ -225,10 +227,6 @@ const styles = {
     marginTop: spacing.lg,
   },
   navigation: {
-    position: 'absolute' as const,
-    bottom: 0,
-    left: 0,
-    right: 0,
     flexDirection: 'row' as const,
     alignItems: 'center' as const,
     justifyContent: 'space-between' as const,
@@ -279,9 +277,9 @@ const styles = {
   nextButtonGradient: {
     flexDirection: 'row' as const,
     alignItems: 'center' as const,
-    paddingHorizontal: spacing.lg,
+    paddingHorizontal: spacing.md,
     paddingVertical: spacing.sm,
-    minWidth: 100,
+    minWidth: 80,
   },
   nextButtonText: {
     color: 'white',
