@@ -53,7 +53,10 @@ export default function CongratulationsScreen() {
 
   const handleGoHome = () => {
     resetCurrentStory();
-    navigation.navigate('Home');
+    navigation.reset({
+      index: 0,
+      routes: [{ name: 'Home' }],
+    });
   };
 
   const sparkleRotationInterpolation = sparkleRotation.interpolate({
